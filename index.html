@@ -3,184 +3,713 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Puzzle Empire</title>
+
+    <title>Privacy Policy | Puzzle Empire</title>
+
+    <meta name="description"
+          content="Privacy Policy for Puzzle Empire mobile game.">
 
     <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #050510;
+            --card: rgba(14, 14, 35, 0.82);
+            --text: #f4f4ff;
+            --muted: #a9a9c7;
+            --pink: #ff2bd6;
+            --cyan: #00eaff;
+            --purple: #8a5cff;
+            --border: rgba(0, 234, 255, 0.22);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
-            max-width: 900px;
-            margin: auto;
-            padding: 30px 20px;
-            color: #222;
-            background: #fff;
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(255, 43, 214, 0.13),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(0, 234, 255, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 50% 90%,
+                    rgba(138, 92, 255, 0.12),
+                    transparent 35%
+                ),
+                var(--bg);
+
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.75;
         }
 
-        h1 {
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.018) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.018) 1px,
+                    transparent 1px
+                );
+
+            background-size: 40px 40px;
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent 90%
+            );
+        }
+
+        .container {
+            width: min(950px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+
+        /* HERO */
+
+        .hero {
             text-align: center;
-            margin-bottom: 10px;
+            padding: 45px 20px 55px;
         }
 
-        h2 {
-            margin-top: 30px;
+        .logo {
+            display: inline-block;
+
+            font-size: clamp(34px, 8vw, 68px);
+            font-weight: 900;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+
+            color: #fff;
+
+            text-shadow:
+                0 0 8px var(--cyan),
+                0 0 18px var(--cyan),
+                0 0 35px var(--pink),
+                0 0 65px rgba(255, 43, 214, 0.65);
+
+            animation: neonPulse 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 16px;
+            letter-spacing: 1px;
         }
 
         .updated {
-            text-align: center;
-            color: #666;
-            margin-bottom: 35px;
+            margin-top: 18px;
+
+            display: inline-block;
+            padding: 8px 16px;
+
+            border: 1px solid var(--border);
+            border-radius: 30px;
+
+            color: #cfd0ff;
+            background: rgba(0, 234, 255, 0.04);
+
+            font-size: 13px;
         }
+
+        @keyframes neonPulse {
+            0%, 100% {
+                filter: brightness(1);
+            }
+
+            50% {
+                filter: brightness(1.25);
+            }
+        }
+
+        /* CARDS */
+
+        .card {
+            position: relative;
+
+            margin: 22px 0;
+            padding: 30px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+            border-radius: 20px;
+
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+
+            box-shadow:
+                0 0 20px rgba(0, 234, 255, 0.045),
+                inset 0 0 25px rgba(138, 92, 255, 0.025);
+
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    var(--cyan),
+                    var(--purple),
+                    var(--pink)
+                );
+
+            box-shadow:
+                0 0 12px var(--cyan),
+                0 0 25px var(--pink);
+        }
+
+        .card:hover {
+            border-color: rgba(0, 234, 255, 0.45);
+
+            box-shadow:
+                0 0 30px rgba(0, 234, 255, 0.09),
+                0 0 45px rgba(255, 43, 214, 0.04);
+        }
+
+        h2 {
+            color: #ffffff;
+
+            font-size: 21px;
+            margin-bottom: 14px;
+
+            text-shadow:
+                0 0 10px rgba(0, 234, 255, 0.5);
+        }
+
+        h2 span {
+            color: var(--cyan);
+            margin-right: 8px;
+        }
+
+        p {
+            color: #c8c8df;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 22px;
+            margin-top: 10px;
+        }
+
+        li {
+            color: #c8c8df;
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        li::marker {
+            color: var(--cyan);
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        /* ADMONITION */
+
+        .highlight {
+            border-color: rgba(255, 43, 214, 0.35);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 43, 214, 0.07),
+                    rgba(0, 234, 255, 0.045)
+                );
+
+            box-shadow:
+                0 0 25px rgba(255, 43, 214, 0.06);
+        }
+
+        .highlight h2 {
+            color: #ff75e7;
+
+            text-shadow:
+                0 0 12px rgba(255, 43, 214, 0.6);
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            padding: 35px 25px;
+        }
+
+        .email {
+            display: inline-block;
+
+            margin-top: 15px;
+            padding: 12px 20px;
+
+            color: var(--cyan);
+
+            border: 1px solid rgba(0, 234, 255, 0.35);
+            border-radius: 12px;
+
+            background: rgba(0, 234, 255, 0.05);
+
+            text-decoration: none;
+
+            transition: 0.25s;
+        }
+
+        .email:hover {
+            color: #fff;
+
+            border-color: var(--cyan);
+
+            box-shadow:
+                0 0 15px rgba(0, 234, 255, 0.35);
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+
+            padding: 35px 15px 10px;
+
+            color: #777799;
+            font-size: 13px;
+        }
+
+        .footer-neon {
+            color: var(--cyan);
+
+            text-shadow:
+                0 0 8px rgba(0, 234, 255, 0.7);
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: min(100% - 20px, 950px);
+                padding: 30px 0;
+            }
+
+            .hero {
+                padding: 30px 10px 35px;
+            }
+
+            .logo {
+                letter-spacing: 3px;
+            }
+
+            .card {
+                padding: 24px 20px;
+                border-radius: 16px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            p,
+            li {
+                font-size: 14px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-<h1>Privacy Policy</h1>
+<div class="container">
 
-<div class="updated">
-    Last updated: August 8, 2026
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="logo">
+            PUZZLE EMPIRE
+        </div>
+
+        <div class="subtitle">
+            Privacy Policy
+        </div>
+
+        <div class="updated">
+            Last Updated: August 8, 2026
+        </div>
+
+    </header>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Welcome to Puzzle Empire
+        </h2>
+
+        <p>
+            Welcome to <strong>Puzzle Empire</strong>, a mobile puzzle game
+            designed for entertainment and gameplay.
+        </p>
+
+        <p>
+            This Privacy Policy explains what information may be processed
+            when you use Puzzle Empire and how third-party advertising services
+            may handle information.
+        </p>
+
+        <p>
+            Puzzle Empire does <strong>not require users to create an account
+            or log in</strong> to play the game.
+        </p>
+
+    </section>
+
+
+    <!-- INFORMATION -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Information We Collect
+        </h2>
+
+        <p>
+            Puzzle Empire does not ask users to provide personal information
+            such as their name, phone number, home address, or password in
+            order to play the game.
+        </p>
+
+        <p>
+            The game may store gameplay-related information locally on the
+            user's device, such as:
+        </p>
+
+        <ul>
+            <li>Game progress</li>
+            <li>Completed levels</li>
+            <li>Coins, gems, and stars</li>
+            <li>Game settings and preferences</li>
+            <li>Other gameplay-related information</li>
+        </ul>
+
+        <p>
+            This information is used to provide the game's features and
+            maintain gameplay progress.
+        </p>
+
+    </section>
+
+
+    <!-- ADMOB -->
+
+    <section class="card highlight">
+
+        <h2>
+            <span>◆</span>
+            Advertising — Google AdMob
+        </h2>
+
+        <p>
+            Puzzle Empire uses <strong>Google AdMob</strong> to display
+            advertisements within the game.
+        </p>
+
+        <p>
+            Depending on the implementation and applicable settings,
+            advertisements may include:
+        </p>
+
+        <ul>
+            <li>Banner advertisements</li>
+            <li>Interstitial advertisements</li>
+            <li>Rewarded advertisements</li>
+        </ul>
+
+        <p>
+            Google AdMob may process information such as advertising
+            identifiers, device information, IP address, approximate location,
+            and information related to advertising interactions for purposes
+            such as delivering, measuring, and improving advertisements.
+        </p>
+
+        <p>
+            The type of advertising shown may depend on the user's device
+            settings, consent choices, applicable laws, and Google's
+            advertising systems.
+        </p>
+
+        <p>
+            For more information about Google's handling of information,
+            please review Google's privacy documentation.
+        </p>
+
+    </section>
+
+
+    <!-- REWARDED ADS -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Rewarded Advertisements
+        </h2>
+
+        <p>
+            Puzzle Empire may offer optional rewarded advertisements.
+        </p>
+
+        <p>
+            If a player chooses to watch a rewarded advertisement, the game
+            may provide an in-game reward after the advertisement has been
+            successfully completed.
+        </p>
+
+        <p>
+            Players are not required to watch rewarded advertisements in
+            order to use the basic gameplay features of the application,
+            except where a particular optional game feature specifically
+            requires a rewarded advertisement.
+        </p>
+
+    </section>
+
+
+    <!-- INTERNET -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Internet Connection
+        </h2>
+
+        <p>
+            Puzzle Empire may require an internet connection for certain
+            features, including loading advertisements and other
+            online-dependent functionality.
+        </p>
+
+        <p>
+            Advertisement availability is not guaranteed. An advertisement
+            may occasionally be unavailable because of network conditions,
+            advertising inventory, geographic availability, or other
+            technical reasons.
+        </p>
+
+    </section>
+
+
+    <!-- THIRD PARTY -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Third-Party Services
+        </h2>
+
+        <p>
+            Puzzle Empire uses third-party services that may process technical,
+            device, or advertising-related information.
+        </p>
+
+        <p>
+            The primary third-party advertising service currently used by the
+            application is <strong>Google Mobile Ads (AdMob)</strong>.
+        </p>
+
+        <p>
+            Third-party services operate under their own privacy policies and
+            terms. Users should review the applicable policies of those
+            services for additional information.
+        </p>
+
+    </section>
+
+
+    <!-- CHILDREN -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Children's Privacy
+        </h2>
+
+        <p>
+            Puzzle Empire does not knowingly request personal information
+            from children through the game.
+        </p>
+
+        <p>
+            If you believe that personal information has been provided to us
+            through the application in a manner that should not have occurred,
+            please contact us so that we can review the matter.
+        </p>
+
+    </section>
+
+
+    <!-- DATA SECURITY -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Data Security
+        </h2>
+
+        <p>
+            We take reasonable measures to protect information handled by
+            the application.
+        </p>
+
+        <p>
+            However, no method of electronic storage or transmission over the
+            internet can be guaranteed to be completely secure.
+        </p>
+
+    </section>
+
+
+    <!-- USER CHOICES -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Your Choices
+        </h2>
+
+        <p>
+            You may uninstall Puzzle Empire from your Android device at any
+            time.
+        </p>
+
+        <p>
+            You may also manage certain advertising and privacy-related
+            settings through your Android device and applicable Google
+            advertising or consent settings.
+        </p>
+
+        <p>
+            Game information stored locally on your device may be removed when
+            application data is cleared or the application is uninstalled,
+            depending on your device and Android settings.
+        </p>
+
+    </section>
+
+
+    <!-- CHANGES -->
+
+    <section class="card">
+
+        <h2>
+            <span>◆</span>
+            Changes to This Privacy Policy
+        </h2>
+
+        <p>
+            We may update this Privacy Policy from time to time to reflect
+            changes to Puzzle Empire, applicable requirements, or the services
+            used by the application.
+        </p>
+
+        <p>
+            When changes are made, the updated version will be published on
+            this page and the "Last Updated" date will be changed accordingly.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="card contact">
+
+        <h2>
+            <span>◆</span>
+            Contact Us
+        </h2>
+
+        <p>
+            If you have any questions or concerns regarding this Privacy
+            Policy or Puzzle Empire, you can contact us at:
+        </p>
+
+        <!-- REPLACE THIS EMAIL -->
+
+        <a class="email"
+           href="mailto:YOUR_EMAIL_HERE">
+            farmaanuddinf51048@gmail.com
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            <span class="footer-neon">PUZZLE EMPIRE</span>
+        </div>
+
+        <div>
+            © 2026 Puzzle Empire. All rights reserved.
+        </div>
+
+    </footer>
+
 </div>
-
-<p>
-    Welcome to <strong>Puzzle Empire</strong>. This Privacy Policy explains how
-    information may be collected, used, and shared when you use the Puzzle Empire
-    mobile application.
-</p>
-
-<h2>1. Information We Collect</h2>
-
-<p>
-    Puzzle Empire does not require you to create an account or provide personal
-    information such as your name, phone number, or home address to play the game.
-</p>
-
-<p>
-    The application may store certain game-related information locally on your
-    device, such as game progress, levels, coins, gems, stars, settings, and other
-    gameplay preferences.
-</p>
-
-<h2>2. Advertising</h2>
-
-<p>
-    Puzzle Empire uses Google AdMob to display advertisements, including banner,
-    interstitial, and rewarded advertisements.
-</p>
-
-<p>
-    Google AdMob may collect and process information such as advertising identifiers,
-    device information, IP address, approximate location, and information related
-    to advertising interactions in accordance with Google's privacy policies and
-    applicable laws.
-</p>
-
-<p>
-    Advertisements may be personalized or non-personalized depending on the user's
-    device settings, consent choices, applicable laws, and Google's advertising
-    systems.
-</p>
-
-<p>
-    For more information about how Google handles information for advertising,
-    please review Google's privacy documentation.
-</p>
-
-<h2>3. Internet Connection</h2>
-
-<p>
-    Puzzle Empire may require an internet connection for certain features,
-    including retrieving advertisements and other online functionality.
-</p>
-
-<p>
-    The availability of advertisements depends on network connectivity and
-    advertising inventory. An advertisement may not always be available.
-</p>
-
-<h2>4. Rewarded Advertisements</h2>
-
-<p>
-    Puzzle Empire may provide optional rewarded advertisements. When a user
-    chooses to watch a rewarded advertisement, the application may provide an
-    in-game reward after the advertisement has been successfully completed.
-</p>
-
-<h2>5. Analytics and Third-Party Services</h2>
-
-<p>
-    Puzzle Empire may use third-party services that process technical or
-    advertising-related information necessary to provide, maintain, secure,
-    and improve the application.
-</p>
-
-<p>
-    These third-party services may include Google Mobile Ads (AdMob).
-</p>
-
-<h2>6. Children's Privacy</h2>
-
-<p>
-    Puzzle Empire is not intended to knowingly collect personal information from
-    children. We do not knowingly request or collect personal information from
-    children through the application.
-</p>
-
-<p>
-    If you believe that a child has provided personal information through the
-    application, please contact us so that appropriate action can be taken.
-</p>
-
-<h2>7. Data Security</h2>
-
-<p>
-    We take reasonable measures to protect information processed through the
-    application. However, no method of electronic transmission or storage can be
-    guaranteed to be completely secure.
-</p>
-
-<h2>8. Your Choices</h2>
-
-<p>
-    You can control certain advertising and privacy-related settings through your
-    Android device and, where applicable, Google's advertising settings and
-    consent mechanisms.
-</p>
-
-<p>
-    You may also uninstall Puzzle Empire from your device at any time. Local
-    game data stored by the application may be removed when the application data
-    is cleared or the application is uninstalled, depending on the Android
-    device and its settings.
-</p>
-
-<h2>9. Changes to This Privacy Policy</h2>
-
-<p>
-    We may update this Privacy Policy from time to time. Any changes will be
-    published on this page with an updated "Last updated" date.
-</p>
-
-<h2>10. Contact Us</h2>
-
-<p>
-    If you have questions, concerns, or requests regarding this Privacy Policy
-    or Puzzle Empire, please contact us at:
-</p>
-
-<p>
-    <strong>Email:</strong> farmaanuddinf51048@gmail.com
-</p>
-
-<h2>11. Google AdMob</h2>
-
-<p>
-    Puzzle Empire uses Google AdMob for advertising services. Google's services
-    may process information according to Google's applicable policies.
-</p>
-
-<p>
-    For more information, please visit Google's privacy policy.
-</p>
 
 </body>
 </html>
